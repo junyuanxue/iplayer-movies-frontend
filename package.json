@@ -12,5 +12,8 @@
   },
   "author": "Junyuan Xue",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/junyuanxue/iplayer-movies-frontend#readme"
+  "homepage": "https://bitbucket.org/junyuanxue/iplayer-movies-frontend#readme",
+  "devDependencies": {
+    "bower": "^1.7.9"
+  }
 }
