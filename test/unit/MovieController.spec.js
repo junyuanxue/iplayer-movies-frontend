@@ -8,14 +8,14 @@ describe('MovieController', function () {
       'title': 'Sydney White',
       'synopsis': 'Modern Snow White',
       'duration': 6060,
-      'channel': 'BBC Two',
+      'pid': 'b01ngx7r',
       'rating': 5
     },
     {
       'title': 'Emma',
       'synopsis': 'Jane Austen classic',
       'duration': 6840,
-      'channel': 'BBC Two',
+      'pid': 'b007969t',
       'rating': 7
     }
   ];
@@ -32,16 +32,16 @@ describe('MovieController', function () {
 
   it('instructs service to get a list of movies', function () {
     spyOn(MovieService, 'getMovies').and.callThrough();
-        
+
     expect(MovieService.getMovies).toHaveBeenCalled;
   });
 
   it('updates the movies', function () {
     var movie1 = new movieFactory(
-      'Sydney White', 5, 'Modern Snow White', 6060, 'BBC Two'
+      'Sydney White', 5, 'Modern Snow White', 6060, 'b01ngx7r'
     );
     var movie2 = new movieFactory(
-      'Emma', 7, 'Jane Austen classic', 6840, 'BBC Two'
+      'Emma', 7, 'Jane Austen classic', 6840, 'b007969t'
     );
 
     expect(ctrl.movies).toEqual([movie1, movie2]);

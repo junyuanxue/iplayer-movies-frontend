@@ -25,7 +25,7 @@
         <li class="movie-info" ng-repeat="movie in ctrl.movies">
           <p>
             <i class="material-icons">&#xE039;</i>
-            <a class="title"> {{ movie.title }} </a>
+            <a href="{{ movie.url }}" class="title"> {{ movie.title }} </a>
             <span ng-if="movie.rating !== null" class="rating"> {{ movie.rating }}/10 </span>
           </p>
           <p> {{ movie.synopsis }} </p>

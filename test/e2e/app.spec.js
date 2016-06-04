@@ -47,8 +47,8 @@ describe('iPlayerMovies', function () {
 
     expect(titles.first().getText()).toEqual('Sydney White');
     expect(titles.last().getText()).toEqual('Emma');
-    expect(title.first().getAttribute('href')).toEqual(baseUrl + 'b01ngx7r');
-    expect(title.last().getAttribute('href')).toEqual(baseUrl + 'b007969t')
+    expect(titles.first().getAttribute('href')).toEqual(baseUrl + 'b01ngx7r');
+    expect(titles.last().getAttribute('href')).toEqual(baseUrl + 'b007969t')
     expect(ratings.first().getText()).toEqual('5/10');
     expect(ratings.last().getText()).toEqual('7/10');
     expect(synopses.first().getText()).toEqual('Modern Snow White');
