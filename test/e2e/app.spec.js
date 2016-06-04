@@ -48,7 +48,7 @@ describe('iPlayerMovies', function () {
     expect(titles.first().getText()).toEqual('Sydney White');
     expect(ratings.first().getText()).toEqual('5/10');
     expect(ratings.last().getText()).toEqual('7/10');
-    expect(synopses.last().getText()).toEqual('Jane Austen Classic');
+    expect(synopses.last().getText()).toEqual('Jane Austen classic');
     expect(duration.first().getText()).toEqual('101 mins');
     expect(duration.last().getText()).toEqual('114 mins');
     expect(channels.first().getText()).toEqual('BBC Two');
