@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "karma": "karma start test/karma.conf.js",
     "protractor": "protractor test/protractor.conf.js"
   },
   "repository": {
