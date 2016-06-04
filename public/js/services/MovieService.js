@@ -21,7 +21,7 @@ function MovieService($http, movieFactory) {
       movie.rating,
       movie.synopsis,
       movie.duration,
-      movie.channel
+      movie.pid
     );
   }
 }

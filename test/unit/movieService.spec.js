@@ -2,20 +2,20 @@ describe('MovieService', function () {
   beforeEach(module('iPlayerMovies'));
 
   var MovieService, movieFactory, httpBackend;
-  
+
   var data = [
     {
       'title': 'Sydney White',
       'synopsis': 'Modern Snow White',
       'duration': 6060,
-      'channel': 'BBC Two',
+      'pid': 'b01ngx7r',
       'rating': 5
     },
     {
       'title': 'Emma',
       'synopsis': 'Jane Austen classic',
       'duration': 6840,
-      'channel': 'BBC Two',
+      'pid': 'b007969t',
       'rating': 7
     }
   ];
@@ -29,10 +29,10 @@ describe('MovieService', function () {
   it('gets a list of movies from server', function () {
     httpBackend.expectGET('http://localhost:8000/movies/').respond(data);
     var movie1 = new movieFactory(
-      'Sydney White', 5, 'Modern Snow White', 6060, 'BBC Two'
+      'Sydney White', 5, 'Modern Snow White', 6060, 'b01ngx7r'
     );
     var movie2 = new movieFactory(
-      'Emma', 7, 'Jane Austen classic', 6840, 'BBC Two'
+      'Emma', 7, 'Jane Austen classic', 6840, 'b007969t'
     );
 
     MovieService.getMovies().then(function (result) {
