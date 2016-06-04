@@ -1,0 +1,16 @@
+{
+  "name": "iplayer-movies-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://junyuanxue@bitbucket.org/junyuanxue/iplayer-movies-frontend.git"
+  },
+  "author": "Junyuan Xue",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/junyuanxue/iplayer-movies-frontend#readme"
+}
