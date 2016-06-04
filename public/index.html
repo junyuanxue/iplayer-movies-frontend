@@ -22,8 +22,10 @@
     <div ng-controller="MovieController as ctrl">
       <ul>
         <li class="movie-info" ng-repeat="movie in ctrl.movies">
-          <p class="title"> {{ movie.title }} </p>
-          <p ng-if="movie.rating !== null"> {{ movie.rating }}/10 </p>
+          <p>
+            <span class="title"> {{ movie.title }} </span>
+            <span ng-if="movie.rating !== null" class="rating"> {{ movie.rating }}/10 </span>
+          </p>
           <p> {{ movie.synopsis }} </p>
           <p> {{ movie.duration / 60 }} mins </p>
           <p> {{ movie.channel }} </p>

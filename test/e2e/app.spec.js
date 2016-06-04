@@ -40,10 +40,10 @@ describe('iPlayerMovies', function () {
 
   it('fetchs and displays a list of movies', function () {
     var titles = $$('.movie-info .title');
-    var ratings = $$('.movie-info p:nth-child(2)');
-    var synopses = $$('.movie-info p:nth-child(3)');
-    var duration = $$('.movie-info p:nth-child(4)');
-    var channels = $$('.movie-info p:nth-child(5)');
+    var ratings = $$('.movie-info .rating');
+    var synopses = $$('.movie-info p:nth-child(2)');
+    var duration = $$('.movie-info p:nth-child(3)');
+    var channels = $$('.movie-info p:nth-child(4)');
 
     expect(titles.first().getText()).toEqual('Sydney White');
     expect(ratings.first().getText()).toEqual('5/10');
