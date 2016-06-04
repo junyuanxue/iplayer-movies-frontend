@@ -16,10 +16,12 @@ function MovieService($http) {
   }
 
   function _createMovieObject(movie) {
-    return new movieFactory(movie.title,
-                            movie.rating,
-                            movie.synopsis,
-                            movie.duration,
-                            movie.channel);
+    return new movieFactory(
+      movie.title,
+      movie.rating,
+      movie.synopsis,
+      movie.duration,
+      movie.channel
+    );
   }
 }

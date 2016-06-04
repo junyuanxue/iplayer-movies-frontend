@@ -41,7 +41,7 @@ describe('MovieService', function () {
       'channel': 'BBC Two',
       'rating': 7
     };
-    MovieService.getMovie().then(function (result) {
+    MovieService.getMovies().then(function (result) {
       expect(result).toEqual([movie1, movie2]);
     });
     httpBackend.flush();
