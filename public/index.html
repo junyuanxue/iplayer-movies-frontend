@@ -17,7 +17,7 @@
       <ul>
         <li class="movie-info" ng-repeat="movie in ctrl.movies">
           <p> {{ movie.title }} </p>
-          <p> {{ movie.rating }}/10 </p>
+          <p ng-if="movie.rating !== null"> {{ movie.rating }}/10 </p>
           <p> {{ movie.synopsis }} </p>
           <p> {{ movie.duration / 60 }} mins </p>
           <p> {{ movie.channel }} </p>

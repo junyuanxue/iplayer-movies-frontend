@@ -2,7 +2,7 @@ describe('MovieService', function () {
   beforeEach(module('iPlayerMovies'));
 
   var MovieService, movieFactory, httpBackend;
-
+  
   var data = [
     {
       'title': 'Sydney White',
@@ -18,7 +18,7 @@ describe('MovieService', function () {
       'channel': 'BBC Two',
       'rating': 7
     }
-  ]
+  ];
 
   beforeEach(inject(function (_MovieService_, _movieFactory_, $httpBackend) {
     MovieService = _MovieService_;
@@ -38,7 +38,7 @@ describe('MovieService', function () {
     MovieService.getMovies().then(function (result) {
       expect(result).toEqual([movie1, movie2]);
     });
-    
+
     httpBackend.flush();
   });
 });

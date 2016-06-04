@@ -6,7 +6,6 @@ MovieController.$inject = ['MovieService'];
 
 function MovieController(MovieService) {
   var vm = this;
-  vm.movies = [];
 
   MovieService.getMovies()
     .then(_updateMovies);

@@ -1,27 +1,49 @@
 describe('MovieController', function () {
   beforeEach(module('iPlayerMovies'));
 
-  var ctrl, MovieService;
+  var ctrl, MovieService, movieFactory, httpBackend;
 
-  beforeEach(inject(function ($controller, _MovieService_) {
+  var data = [
+    {
+      'title': 'Sydney White',
+      'synopsis': 'Modern Snow White',
+      'duration': 6060,
+      'channel': 'BBC Two',
+      'rating': 5
+    },
+    {
+      'title': 'Emma',
+      'synopsis': 'Jane Austen classic',
+      'duration': 6840,
+      'channel': 'BBC Two',
+      'rating': 7
+    }
+  ];
+
+  beforeEach(inject(function ($controller, _MovieService_, _movieFactory_, $httpBackend) {
     ctrl = $controller('MovieController');
     MovieService = _MovieService_;
+    movieFactory = _movieFactory_;
+    httpBackend = $httpBackend;
+
+    httpBackend.expectGET('http://localhost:8000/movies/').respond(data);
+    httpBackend.flush();
   }));
 
-  describe('controller set up', function () {
-    it('has an empty of movies', function () {
-      expect(ctrl.movies).toEqual([]);
-    });
+  it('instructs service to get a list of movies', function () {
+    spyOn(MovieService, 'getMovies').and.callThrough();
+        
+    expect(MovieService.getMovies).toHaveBeenCalled;
   });
 
-  describe('get movies from service', function () {
-    it('instructs service to get a list of movies', function () {
-      spyOn(MovieService, 'getMovies').and.callThrough();
-      expect(MovieService.getMovies).toHaveBeenCalled;
-    });
+  it('updates the movies', function () {
+    var movie1 = new movieFactory(
+      'Sydney White', 5, 'Modern Snow White', 6060, 'BBC Two'
+    );
+    var movie2 = new movieFactory(
+      'Emma', 7, 'Jane Austen classic', 6840, 'BBC Two'
+    );
 
-    it('updates the movies', function () {
-
-    });
+    expect(ctrl.movies).toEqual([movie1, movie2]);
   });
 });
