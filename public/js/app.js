@@ -1,1 +1,1 @@
-angular.module('iPlayerMovies', []);
+angular.module('iPlayerMovies', ['angularSpinner']);
