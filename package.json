@@ -14,12 +14,17 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/junyuanxue/iplayer-movies-frontend#readme",
   "devDependencies": {
-    "bower": "^1.7.9"
-  },
-  "dependencies": {
-    "http-server": "^0.9.0",
+    "bower": "^1.7.9",
+    "jasmine-core": "^2.4.1",
     "jasmine-spec-reporter": "^2.4.0",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-spec-reporter": "0.0.26",
     "protractor": "^3.3.0",
     "protractor-http-mock": "^0.8.0"
+  },
+  "dependencies": {
+    "http-server": "^0.9.0"
   }
 }
