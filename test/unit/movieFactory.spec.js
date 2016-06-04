@@ -4,10 +4,12 @@ describe('movieFactory', function () {
   var movie;
   var rating = 7;
   var lengthInSeconds = 6840;
+  var pid = 'b007969t';
+  var BASE_URL = 'http://www.bbc.co.uk/iplayer/episode/';
 
   beforeEach(inject(function (movieFactory) {
     movie = new movieFactory(
-      'Emma', rating, 'Jane Austen classic', lengthInSeconds, 'BBC Two'
+      'Emma', rating, 'Jane Austen classic', lengthInSeconds, pid
     );
   }));
 
@@ -27,7 +29,11 @@ describe('movieFactory', function () {
     expect(movie.duration).toEqual(lengthInSeconds);
   });
 
-  it('has a channel', function () {
-    expect(movie.channel).toEqual('BBC Two');
+  it('has a programme id', function () {
+    expect(movie.pid).toEqual(pid);
+  });
+
+  it('has a url', function () {
+    expect(movie.url).toEqual(BASE_URL + pid);
   });
 });
