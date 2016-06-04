@@ -1,0 +1,26 @@
+body {
+  background-color: #252525;
+  font-family: sans-serif;
+  margin: 1em 10em 0 10em;
+  color: white;
+}
+
+h1 {
+  color: #f54997;
+  font-weight: lighter;
+  margin-top: 1.5em;
+}
+
+ul {
+  -moz-column-count: 2;
+  -moz-column-gap: 8em;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 8em;
+  column-count: 2;
+  column-gap: 8em;
+}
+
+li {
+  list-style: none;
+  border-bottom: 1px solid #585858;
+}

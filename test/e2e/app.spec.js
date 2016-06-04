@@ -39,7 +39,7 @@ describe('iPlayerMovies', function () {
   });
 
   it('fetchs and displays a list of movies', function () {
-    var titles = $$('.movie-info p:nth-child(1)');
+    var titles = $$('.movie-info .title');
     var ratings = $$('.movie-info p:nth-child(2)');
     var synopses = $$('.movie-info p:nth-child(3)');
     var duration = $$('.movie-info p:nth-child(4)');
