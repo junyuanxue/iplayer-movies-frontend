@@ -35,15 +35,15 @@ describe('iPlayerMovies', function () {
   });
 
   it('has a home page title', function () {
-    expect(browser.getTitle()).toEqual('What\'s on BBC iPlayer?');
+    expect(browser.getTitle()).toEqual('What\'s on BBC iPlayer');
   });
 
   it('fetchs and displays a list of movies', function () {
-    var titles = $$('.movies p:nth-child(1)');
-    var ratings = $$('.movies p:nth-child(2)');
-    var synopses = $$('.movies p:nth-child(3)');
-    var duration = $$('.movies p:nth-child(4)');
-    var channels = $$('.movies p:nth-child(5)');
+    var titles = $$('.movie-info p:nth-child(1)');
+    var ratings = $$('.movie-info p:nth-child(2)');
+    var synopses = $$('.movie-info p:nth-child(3)');
+    var duration = $$('.movie-info p:nth-child(4)');
+    var channels = $$('.movie-info p:nth-child(5)');
 
     expect(titles.first().getText()).toEqual('Sydney White');
     expect(ratings.first().getText()).toEqual('5/10');
@@ -51,6 +51,6 @@ describe('iPlayerMovies', function () {
     expect(synopses.last().getText()).toEqual('Jane Austen Classic');
     expect(duration.first().getText()).toEqual('101 mins');
     expect(duration.last().getText()).toEqual('114 mins');
-    expect(channels.first().getText()).toEqual('On BBC Two');
+    expect(channels.first().getText()).toEqual('BBC Two');
   });
 });
