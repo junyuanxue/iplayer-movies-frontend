@@ -1,10 +1,11 @@
 describe('MovieController', function () {
   beforeEach(module('iPlayerMovies'));
 
-  var ctrl;
+  var ctrl, MovieService;
 
-  beforeEach(inject(function ($controller) {
+  beforeEach(inject(function ($controller, _MovieService_) {
     ctrl = $controller('MovieController');
+    MovieService = _MovieService_;
   }));
 
   describe('controller set up', function () {
@@ -20,7 +21,7 @@ describe('MovieController', function () {
     });
 
     it('updates the movies', function () {
-      
+
     });
   });
 });
