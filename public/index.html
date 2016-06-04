@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/MovieController.js"></script>
 
     <title>What's on BBC iPlayer</title>
   </head>
   <body>
     <h1>What's on BBC iPlayer</h1>
-    
+
     <div ng-controller="MovieController as ctrl">
       <ul>
         <li class="movie-info" ng-repeat="movie in ctrl.movies">
