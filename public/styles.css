@@ -7,7 +7,6 @@ body {
 }
 
 h1 {
-  color: #f54997;
   font-weight: lighter;
   margin: 1.5em 0 1.5em 0;
 }
@@ -21,10 +20,16 @@ li {
   font-size: 1.2em;
 }
 
-i {
+i, h1, .rating, a:hover {
   color: #f54997;
 }
 
-span {
+a {
   margin-right: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.movie-info p:last-child {
+  font-size: 0.8em;
 }
