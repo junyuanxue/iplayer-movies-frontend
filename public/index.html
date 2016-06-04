@@ -13,6 +13,7 @@
     <script src="js/factories/movieFactory.js"></script>
 
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <title>What's on BBC iPlayer</title>
   </head>
@@ -23,6 +24,7 @@
       <ul>
         <li class="movie-info" ng-repeat="movie in ctrl.movies">
           <p>
+            <i class="material-icons">&#xE039;</i>
             <span class="title"> {{ movie.title }} </span>
             <span ng-if="movie.rating !== null" class="rating"> {{ movie.rating }}/10 </span>
           </p>
