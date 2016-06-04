@@ -5,6 +5,8 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/spin.js/spin.js"></script>
     <script src="bower_components/angular-spinner/angular-spinner.js"></script>
+    <script src="bower_components/angular-loading-spinner/angular-loading-spinner.js"></script>
+    
     <script src="js/app.js"></script>
     <script src="js/controllers/MovieController.js"></script>
     <script src="js/services/MovieService.js"></script>
@@ -14,7 +16,7 @@
   </head>
   <body>
     <h1>What's on BBC iPlayer</h1>
-
+    <span us-spinner></span>
     <div ng-controller="MovieController as ctrl">
       <ul>
         <li class="movie-info" ng-repeat="movie in ctrl.movies">
