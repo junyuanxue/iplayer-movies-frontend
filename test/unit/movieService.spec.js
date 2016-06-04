@@ -25,7 +25,7 @@ describe('MovieService', function () {
     httpBackend = $httpBackend;
   }));
 
-  it('gets a list of movies from the server', function () {
+  it('gets a list of movies from server', function () {
     httpBackend.expectGET('http://localhost:8000/movies/').respond(data);
     var movie1 = {
       'title': 'Sydney White',

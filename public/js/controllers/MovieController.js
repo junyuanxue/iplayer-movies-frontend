@@ -14,4 +14,4 @@ function MovieController(MovieService) {
   function _updateMovies (movies) {
     vm.movies = movies;
   }
-};
+}
