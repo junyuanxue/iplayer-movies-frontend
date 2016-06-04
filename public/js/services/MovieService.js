@@ -6,7 +6,7 @@ MovieService.$inject = ['$http'];
 
 function MovieService($http) {
   this.getMovies = function () {
-    var BASE_URL = 'http://localhost:8000'
+    var BASE_URL = 'http://localhost:8000';
     return $http.get(BASE_URL + '/movies/')
       .then(_handleMovieData)
   }
