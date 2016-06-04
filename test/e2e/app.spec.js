@@ -43,7 +43,6 @@ describe('iPlayerMovies', function () {
     var ratings = $$('.movie-info .rating');
     var synopses = $$('.movie-info p:nth-child(2)');
     var duration = $$('.movie-info p:nth-child(3)');
-    var channels = $$('.movie-info p:nth-child(4)');
 
     expect(titles.first().getText()).toEqual('Sydney White');
     expect(ratings.first().getText()).toEqual('5/10');
@@ -51,6 +50,5 @@ describe('iPlayerMovies', function () {
     expect(synopses.last().getText()).toEqual('Jane Austen classic');
     expect(duration.first().getText()).toEqual('101 mins');
     expect(duration.last().getText()).toEqual('114 mins');
-    expect(channels.first().getText()).toEqual('BBC Two');
   });
 });

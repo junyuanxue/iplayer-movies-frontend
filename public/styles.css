@@ -1,7 +1,7 @@
 body {
   background-color: #252525;
   font-family: sans-serif;
-  font-weight: lighter;
+  font-weight: 100;
   margin: 1em 10em 0 10em;
   color: white;
 }
@@ -24,4 +24,8 @@ ul {
 li {
   list-style: none;
   border-bottom: 1px solid #585858;
+}
+
+.title {
+  font-size: 1.3em;
 }
