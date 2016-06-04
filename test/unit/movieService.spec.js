@@ -2,7 +2,7 @@ describe('MovieService', function () {
   beforeEach(module('iPlayerMovies'));
 
   var MovieService, movieFactory, httpBackend;
-
+  var BASE_URL = 'http://localhost:8000';
   var data = [
     {
       'title': 'Sydney White',
@@ -27,7 +27,7 @@ describe('MovieService', function () {
   }));
 
   it('gets a list of movies from server', function () {
-    httpBackend.expectGET('http://localhost:8000/movies/').respond(data);
+    httpBackend.expectGET(BASE_URL + '/movies/').respond(data);
     var movie1 = new movieFactory(
       'Sydney White', 5, 'Modern Snow White', 6060, 'b01ngx7r'
     );

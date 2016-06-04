@@ -2,7 +2,7 @@ describe('MovieController', function () {
   beforeEach(module('iPlayerMovies'));
 
   var ctrl, MovieService, movieFactory, httpBackend;
-
+  var BASE_URL = 'http://localhost:8000';
   var data = [
     {
       'title': 'Sydney White',
@@ -26,7 +26,7 @@ describe('MovieController', function () {
     movieFactory = _movieFactory_;
     httpBackend = $httpBackend;
 
-    httpBackend.expectGET('http://localhost:8000/movies/').respond(data);
+    httpBackend.expectGET(BASE_URL + '/movies/').respond(data);
     httpBackend.flush();
   }));
 
