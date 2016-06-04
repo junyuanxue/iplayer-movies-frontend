@@ -2,9 +2,9 @@ angular
   .module('iPlayerMovies')
   .service('MovieService', MovieService);
 
-MovieService.$inject = ['$http'];
+MovieService.$inject = ['$http', 'movieFactory'];
 
-function MovieService($http) {
+function MovieService($http, movieFactory) {
   this.getMovies = function () {
     var BASE_URL = 'http://localhost:8000';
     return $http.get(BASE_URL + '/movies/')

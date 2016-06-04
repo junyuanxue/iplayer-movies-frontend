@@ -6,7 +6,9 @@ describe('movieFactory', function () {
   var lengthInSeconds = 6840;
 
   beforeEach(inject(function (movieFactory) {
-    movie = new movieFactory('Emma', rating, 'Jane Austen classic', lengthInSeconds, 'BBC Two')
+    movie = new movieFactory(
+      'Emma', rating, 'Jane Austen classic', lengthInSeconds, 'BBC Two'
+    );
   }));
 
   it('has a title', function () {
