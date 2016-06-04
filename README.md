@@ -8,6 +8,8 @@ This is the front-end repo for my solution. For server repo, please click [here]
 
 The front-end is built with AngularJS which makes API calls and fetches data from a Django server. It is served up with Node.js.
 
+As you'd like to keep this challenge private, I decided not to deploy the app.
+
 ## Approach and problems encountered :thought_balloon:
 
 I decided to solve the problem with a decoupled app consist of a [Django server](https://bitbucket.org/junyuanxue/iplayer-movies-server) and an Angular front-end, as it seems to match the architecture your company use (Django back-end with client-side JavaScript framework). Also, as this is my first time using Django, I thought it'd be easier for testing and dependency management when I have 2 separate repos rather than having Angular sitting inside Django. Decoupling would also made the app flexible for future extensions.
