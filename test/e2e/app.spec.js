@@ -13,14 +13,14 @@ describe('iPlayerMovies', function () {
             'title': 'Sydney White',
             'synopsis': 'Modern Snow White',
             'duration': 6060,
-            'channel': 'BBC Two',
+            'pid': 'b01ngx7r',
             'rating': 5
           },
           {
             'title': 'Emma',
             'synopsis': 'Jane Austen classic',
             'duration': 6840,
-            'channel': 'BBC Two',
+            'pid': 'b007969t',
             'rating': 7
           }
         ]
@@ -43,10 +43,15 @@ describe('iPlayerMovies', function () {
     var ratings = $$('.movie-info .rating');
     var synopses = $$('.movie-info p:nth-child(2)');
     var duration = $$('.movie-info p:nth-child(3)');
+    var baseUrl = 'http://www.bbc.co.uk/iplayer/episode/';
 
     expect(titles.first().getText()).toEqual('Sydney White');
+    expect(titles.last().getText()).toEqual('Emma');
+    expect(title.first().getAttribute('href')).toEqual(baseUrl + 'b01ngx7r');
+    expect(title.last().getAttribute('href')).toEqual(baseUrl + 'b007969t')
     expect(ratings.first().getText()).toEqual('5/10');
     expect(ratings.last().getText()).toEqual('7/10');
+    expect(synopses.first().getText()).toEqual('Modern Snow White');
     expect(synopses.last().getText()).toEqual('Jane Austen classic');
     expect(duration.first().getText()).toEqual('101 mins');
     expect(duration.last().getText()).toEqual('114 mins');
